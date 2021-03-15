@@ -1,0 +1,43 @@
+apiVersion: application.giantswarm.io/v1alpha1
+kind: App
+metadata:
+  annotations:
+    chart-operator.giantswarm.io/force-helm-upgrade: "true"
+  creationTimestamp: null
+  labels:
+    app-operator.giantswarm.io/version: 0.0.0
+  name: releases-vmware-unique
+  namespace: giantswarm
+spec:
+  catalog: releases
+  config:
+    configMap:
+      name: ""
+      namespace: ""
+    secret:
+      name: ""
+      namespace: ""
+  install: {}
+  kubeConfig:
+    context:
+      name: ""
+    inCluster: true
+    secret:
+      name: ""
+      namespace: ""
+  name: releases-vmware
+  namespace: giantswarm
+  userConfig:
+    configMap:
+      name: ""
+      namespace: ""
+    secret:
+      name: ""
+      namespace: ""
+  version: 0.0.0-c2bd5b670ce1b54860196c5f5c6c31d3e4a3939b
+status:
+  appVersion: ""
+  release:
+    lastDeployed: null
+    status: ""
+  version: ""

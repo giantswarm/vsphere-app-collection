@@ -1,0 +1,41 @@
+apiVersion: application.giantswarm.io/v1alpha1
+kind: App
+metadata:
+  creationTimestamp: null
+  labels:
+    app-operator.giantswarm.io/version: 0.0.0
+  name: prometheus-operator-app-unique
+  namespace: giantswarm
+spec:
+  catalog: control-plane-catalog
+  config:
+    configMap:
+      name: ""
+      namespace: ""
+    secret:
+      name: ""
+      namespace: ""
+  install: {}
+  kubeConfig:
+    context:
+      name: ""
+    inCluster: true
+    secret:
+      name: ""
+      namespace: ""
+  name: prometheus-operator-app
+  namespace: monitoring
+  userConfig:
+    configMap:
+      name: ""
+      namespace: ""
+    secret:
+      name: ""
+      namespace: ""
+  version: 0.7.0
+status:
+  appVersion: ""
+  release:
+    lastDeployed: null
+    status: ""
+  version: ""

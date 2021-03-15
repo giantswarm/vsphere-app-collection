@@ -1,0 +1,40 @@
+apiVersion: application.giantswarm.io/v1alpha1
+kind: App
+metadata:
+  creationTimestamp: null
+  labels:
+    app-operator.giantswarm.io/version: 0.0.0
+  name: vertical-pod-autoscaler-app-unique
+  namespace: giantswarm
+spec:
+  catalog: control-plane-catalog
+  config:
+    configMap:
+      name: ""
+      namespace: ""
+    secret:
+      name: ""
+      namespace: ""
+  kubeConfig:
+    context:
+      name: ""
+    inCluster: true
+    secret:
+      name: ""
+      namespace: ""
+  name: vertical-pod-autoscaler-app
+  namespace: giantswarm
+  userConfig:
+    configMap:
+      name: vertical-pod-autoscaler
+      namespace: giantswarm
+    secret:
+      name: ""
+      namespace: ""
+  version: 1.0.3
+status:
+  appVersion: ""
+  release:
+    lastDeployed: null
+    status: ""
+  version: ""

@@ -1,0 +1,42 @@
+apiVersion: application.giantswarm.io/v1alpha1
+kind: App
+metadata:
+  annotations:
+    chart-operator.giantswarm.io/force-helm-upgrade: "true"
+  creationTimestamp: null
+  labels:
+    app-operator.giantswarm.io/version: 0.0.0
+  name: gatekeeper-control-plane-rules-unique
+  namespace: giantswarm
+spec:
+  catalog: control-plane-catalog
+  config:
+    configMap:
+      name: ""
+      namespace: ""
+    secret:
+      name: ""
+      namespace: ""
+  kubeConfig:
+    context:
+      name: ""
+    inCluster: true
+    secret:
+      name: ""
+      namespace: ""
+  name: gatekeeper-control-plane-rules
+  namespace: giantswarm
+  userConfig:
+    configMap:
+      name: ""
+      namespace: ""
+    secret:
+      name: ""
+      namespace: ""
+  version: 0.3.0
+status:
+  appVersion: ""
+  release:
+    lastDeployed: null
+    status: ""
+  version: ""

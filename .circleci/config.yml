@@ -1,0 +1,45 @@
+version: 2.1
+jobs:
+  build:
+    machine: true
+    steps:
+      - checkout
+      - run:
+          name: Download architect
+          command: |
+            architect_version="3.2.2"
+            curl -fsSL https://github.com/giantswarm/architect/releases/download/v${architect_version}/architect-v${architect_version}-linux-amd64.tar.gz | tar -xzv --strip-components 1 --wildcards '*/architect'
+            ./architect version
+      - run:
+          name: Template helm chart
+          command: |
+            ./architect helm template --dir "/home/circleci/project/helm/${CIRCLE_PROJECT_REPONAME}-chart"
+      - run:
+          name: Pull docker-helm image
+          command: |
+            image="quay.io/giantswarm/docker-helm:23ac1ca6527bb59e07a6a8c36809488e39dd5791"
+            docker pull ${image}
+      - run:
+          name: Login to quay.io helm registry
+          command: |
+            image="quay.io/giantswarm/docker-helm:23ac1ca6527bb59e07a6a8c36809488e39dd5791"
+            docker run --rm -v /home/circleci/.cnr:/root/.cnr/ ${image} registry login --user="${QUAY_USERNAME}" --password="${QUAY_PASSWORD}" "quay.io"
+      - run:
+          name: Push helm chart to the registry
+          command: |
+            image="quay.io/giantswarm/docker-helm:23ac1ca6527bb59e07a6a8c36809488e39dd5791"
+            chart_dir="/home/circleci/project/helm/${CIRCLE_PROJECT_REPONAME}-chart"
+            docker run --rm -v /home/circleci/.cnr:/root/.cnr/ -v ${chart_dir}:${chart_dir} -w ${chart_dir} ${image} registry push --channel=stable --namespace=giantswarm quay.io
+      - run:
+          name: Deploy
+          command: |
+            ./architect legacy deploy
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only: main

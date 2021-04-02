@@ -17,6 +17,7 @@ spec:
     secret:
       name: ""
       namespace: ""
+  install: {}
   kubeConfig:
     context:
       name: ""
@@ -33,7 +34,7 @@ spec:
     secret:
       name: ""
       namespace: ""
-  version: 0.2.6
+  version: 0.2.9
 status:
   appVersion: ""
   release:

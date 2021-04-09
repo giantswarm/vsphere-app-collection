@@ -17,6 +17,7 @@ spec:
     secret:
       name: ""
       namespace: ""
+  install: {}
   kubeConfig:
     context:
       name: ""
@@ -28,12 +29,12 @@ spec:
   namespace: monitoring
   userConfig:
     configMap:
-      name: ""
-      namespace: ""
+      name: management-cluster-promxy-config
+      namespace: giantswarm
     secret:
       name: ""
       namespace: ""
-  version: 0.8.0
+  version: 0.9.0
 status:
   appVersion: ""
   release:

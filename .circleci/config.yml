@@ -7,7 +7,7 @@ jobs:
       - run:
           name: Download architect
           command: |
-            architect_version="3.2.2"
+            architect_version="3.4.3"
             curl -fsSL https://github.com/giantswarm/architect/releases/download/v${architect_version}/architect-v${architect_version}-linux-amd64.tar.gz | tar -xzv --strip-components 1 --wildcards '*/architect'
             ./architect version
       - run:

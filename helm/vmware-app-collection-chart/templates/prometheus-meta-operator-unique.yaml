@@ -34,7 +34,7 @@ spec:
     secret:
       name: ""
       namespace: ""
-  version: 1.33.0
+  version: 1.34.0
 status:
   appVersion: ""
   release:

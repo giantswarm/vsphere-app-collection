@@ -28,6 +28,7 @@ spec:
       namespace: ""
   name: management-cluster-admission
   namespace: giantswarm
+  namespaceConfig: {}
   userConfig:
     configMap:
       name: ""
@@ -35,4 +36,4 @@ spec:
     secret:
       name: ""
       namespace: ""
-  version: 0.3.0
+  version: 0.4.0

@@ -4,34 +4,4 @@ metadata:
   name: management-cluster-promxy-config
   namespace: giantswarm
 data:
-  values.yaml: |
-    promxy: 
-      serverGroups:
-      - remote_read: true
-        remote_read_path: api/v1/read
-        http_client:
-          dial_timeout: 500ms
-        scheme: http
-        relabel_configs:
-        - source_labels: [__meta_kubernetes_pod_label_app_kubernetes_io_name,
-            __meta_kubernetes_pod_label_app_kubernetes_io_instance]
-          separator: ;
-          regex: prometheus;.+
-          action: keep
-        - source_labels: [__meta_kubernetes_pod_label_app_kubernetes_io_instance]
-          target_label: cluster_id
-          replacement: $1
-          action: replace
-        - source_labels: [__meta_kubernetes_pod_label_app_kubernetes_io_instance]
-          target_label: __path_prefix__
-          replacement: /$1
-          action: replace
-        kubernetes_sd_configs:
-        - api_server: https://kubernetes.default:443
-          role: pod
-          bearer_token_file: /var/run/secrets/kubernetes.io/serviceaccount/token
-          tls_config:
-            ca_file: /var/run/secrets/kubernetes.io/serviceaccount/ca.crt
-            insecure_skip_verify: true
-        timeout: 2m0s
-        ignore_error: true
+  values.yaml: "promxy: \n  serverGroups:\n  - remote_read: true\n    remote_read_path: api/v1/read\n    http_client:\n      dial_timeout: 500ms\n    scheme: http\n    relabel_configs:\n    - source_labels: [__meta_kubernetes_pod_label_app_kubernetes_io_name,\n        __meta_kubernetes_pod_label_app_kubernetes_io_instance]\n      separator: ;\n      regex: prometheus;.+\n      action: keep\n    - source_labels: [__meta_kubernetes_pod_label_app_kubernetes_io_instance]\n      target_label: cluster_id\n      replacement: $1\n      action: replace\n    - source_labels: [__meta_kubernetes_pod_label_app_kubernetes_io_instance]\n      target_label: __path_prefix__\n      replacement: /$1\n      action: replace\n    kubernetes_sd_configs:\n    - api_server: https://kubernetes.default:443\n      role: pod\n      bearer_token_file: /var/run/secrets/kubernetes.io/serviceaccount/token\n      tls_config:\n        ca_file: /var/run/secrets/kubernetes.io/serviceaccount/ca.crt\n        insecure_skip_verify: true\n    timeout: 2m0s\n    ignore_error: true\n"

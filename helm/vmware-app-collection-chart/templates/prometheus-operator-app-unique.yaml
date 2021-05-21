@@ -25,6 +25,7 @@ spec:
       namespace: ""
   name: prometheus-operator-app
   namespace: monitoring
+  namespaceConfig: {}
   userConfig:
     configMap:
       name: ""
@@ -32,4 +33,4 @@ spec:
     secret:
       name: ""
       namespace: ""
-  version: 0.8.1
+  version: 0.8.2

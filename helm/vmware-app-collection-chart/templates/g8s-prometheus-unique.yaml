@@ -27,6 +27,7 @@ spec:
       namespace: ""
   name: g8s-prometheus
   namespace: monitoring
+  namespaceConfig: {}
   userConfig:
     configMap:
       name: ""
@@ -34,4 +35,4 @@ spec:
     secret:
       name: ""
       namespace: ""
-  version: 5.2.0
+  version: 5.4.0

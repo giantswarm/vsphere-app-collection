@@ -15,12 +15,12 @@ spec:
       - name: KONFIGURE_APP_NAME
         value: release-operator
       - name: KONFIGURE_APP_VERSION
-        value: 2.3.0
+        value: 2.3.1
       - name: KONFIGURE_APP_CATALOG
         value: control-plane-catalog
       name: konfigure
     repoURL: https://github.com/giantswarm/config.git
-    targetRevision: FIXME
+    targetRevision: v1
   syncPolicy:
     automated:
       allowEmpty: true

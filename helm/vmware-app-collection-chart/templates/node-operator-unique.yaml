@@ -1,39 +1,28 @@
-apiVersion: application.giantswarm.io/v1alpha1
-kind: App
+apiVersion: argoproj.io/v1alpha1
+kind: Application
 metadata:
-  annotations:
-    chart-operator.giantswarm.io/force-helm-upgrade: "true"
-    config.giantswarm.io/version: 1.x.x
-  creationTimestamp: null
-  labels:
-    app-operator.giantswarm.io/version: 0.0.0
-  name: node-operator-unique
-  namespace: giantswarm
-spec:
-  catalog: control-plane-catalog
-  config:
-    configMap:
-      name: ""
-      namespace: ""
-    secret:
-      name: ""
-      namespace: ""
-  install: {}
-  kubeConfig:
-    context:
-      name: ""
-    inCluster: true
-    secret:
-      name: ""
-      namespace: ""
   name: node-operator
-  namespace: giantswarm
-  namespaceConfig: {}
-  userConfig:
-    configMap:
-      name: ""
-      namespace: ""
-    secret:
-      name: ""
-      namespace: ""
-  version: 1.2.0
+  namespace: argocd
+spec:
+  destination:
+    namespace: giantswarm
+    server: https://kubernetes.default.svc
+  project: collections
+  source:
+    path: .
+    plugin:
+      env:
+      - name: KONFIGURE_APP_NAME
+        value: node-operator
+      - name: KONFIGURE_APP_VERSION
+        value: 1.2.1
+      - name: KONFIGURE_APP_CATALOG
+        value: control-plane-catalog
+      name: konfigure
+    repoURL: https://github.com/giantswarm/config.git
+    targetRevision: v1
+  syncPolicy:
+    automated:
+      allowEmpty: true
+      prune: true
+      selfHeal: true

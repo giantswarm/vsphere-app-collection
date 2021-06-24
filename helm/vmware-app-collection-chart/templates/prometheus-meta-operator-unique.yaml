@@ -1,28 +1,38 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Application
+apiVersion: application.giantswarm.io/v1alpha1
+kind: App
 metadata:
-  name: prometheus-meta-operator
-  namespace: argocd
+  annotations:
+    chart-operator.giantswarm.io/force-helm-upgrade: "true"
+  creationTimestamp: null
+  labels:
+    app-operator.giantswarm.io/version: 0.0.0
+  name: prometheus-meta-operator-unique
+  namespace: giantswarm
 spec:
-  destination:
-    namespace: monitoring
-    server: https://kubernetes.default.svc
-  project: collections
-  source:
-    path: .
-    plugin:
-      env:
-      - name: KONFIGURE_APP_NAME
-        value: prometheus-meta-operator
-      - name: KONFIGURE_APP_VERSION
-        value: 1.44.1
-      - name: KONFIGURE_APP_CATALOG
-        value: control-plane-catalog
-      name: konfigure
-    repoURL: https://github.com/giantswarm/config.git
-    targetRevision: FIXME
-  syncPolicy:
-    automated:
-      allowEmpty: true
-      prune: true
-      selfHeal: true
+  catalog: control-plane-catalog
+  config:
+    configMap:
+      name: ""
+      namespace: ""
+    secret:
+      name: ""
+      namespace: ""
+  install: {}
+  kubeConfig:
+    context:
+      name: ""
+    inCluster: true
+    secret:
+      name: ""
+      namespace: ""
+  name: prometheus-meta-operator
+  namespace: monitoring
+  namespaceConfig: {}
+  userConfig:
+    configMap:
+      name: ""
+      namespace: ""
+    secret:
+      name: ""
+      namespace: ""
+  version: 1.44.2

@@ -15,12 +15,12 @@ spec:
       - name: KONFIGURE_APP_NAME
         value: prometheus-operator-app
       - name: KONFIGURE_APP_VERSION
-        value: 0.8.2
+        value: 0.9.0
       - name: KONFIGURE_APP_CATALOG
         value: control-plane-catalog
       name: konfigure
     repoURL: https://github.com/giantswarm/config.git
-    targetRevision: FIXME
+    targetRevision: v1
   syncPolicy:
     automated:
       allowEmpty: true

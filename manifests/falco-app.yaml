@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: falco-app
+  namespace: argocd
+spec:
+  destination:
+    namespace: giantswarm
+    server: https://kubernetes.default.svc
+  project: collections
+  source:
+    path: .
+    plugin:
+      env:
+      - name: KONFIGURE_APP_NAME
+        value: falco-app
+      - name: KONFIGURE_APP_VERSION
+        value: 0.1.0
+      - name: KONFIGURE_APP_CATALOG
+        value: control-plane-catalog
+      name: konfigure
+    repoURL: https://github.com/giantswarm/config.git
+    targetRevision: v1
+  syncPolicy:
+    automated:
+      allowEmpty: true
+      prune: true
+      selfHeal: true

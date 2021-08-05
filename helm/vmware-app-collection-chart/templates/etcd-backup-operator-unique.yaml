@@ -1,38 +1,28 @@
-apiVersion: application.giantswarm.io/v1alpha1
-kind: App
+apiVersion: argoproj.io/v1alpha1
+kind: Application
 metadata:
-  annotations:
-    chart-operator.giantswarm.io/force-helm-upgrade: "true"
-  creationTimestamp: null
-  labels:
-    app-operator.giantswarm.io/version: 0.0.0
-  name: etcd-backup-operator-unique
-  namespace: giantswarm
-spec:
-  catalog: control-plane-catalog
-  config:
-    configMap:
-      name: ""
-      namespace: ""
-    secret:
-      name: ""
-      namespace: ""
-  install: {}
-  kubeConfig:
-    context:
-      name: ""
-    inCluster: true
-    secret:
-      name: ""
-      namespace: ""
   name: etcd-backup-operator
-  namespace: giantswarm
-  namespaceConfig: {}
-  userConfig:
-    configMap:
-      name: ""
-      namespace: ""
-    secret:
-      name: ""
-      namespace: ""
-  version: 2.3.0
+  namespace: argocd
+spec:
+  destination:
+    namespace: giantswarm
+    server: https://kubernetes.default.svc
+  project: collections
+  source:
+    path: .
+    plugin:
+      env:
+      - name: KONFIGURE_APP_NAME
+        value: etcd-backup-operator
+      - name: KONFIGURE_APP_VERSION
+        value: 2.4.0
+      - name: KONFIGURE_APP_CATALOG
+        value: control-plane-catalog
+      name: konfigure
+    repoURL: https://github.com/giantswarm/config.git
+    targetRevision: v1
+  syncPolicy:
+    automated:
+      allowEmpty: true
+      prune: true
+      selfHeal: true

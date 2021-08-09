@@ -15,12 +15,12 @@ spec:
       - name: KONFIGURE_APP_NAME
         value: dex-app
       - name: KONFIGURE_APP_VERSION
-        value: 1.11.2
+        value: 1.12.0
       - name: KONFIGURE_APP_CATALOG
         value: control-plane-catalog
       name: konfigure
     repoURL: https://github.com/giantswarm/config.git
-    targetRevision: FIXME
+    targetRevision: v1
   syncPolicy:
     automated:
       allowEmpty: true

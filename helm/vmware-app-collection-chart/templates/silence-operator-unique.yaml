@@ -15,7 +15,7 @@ spec:
       - name: KONFIGURE_APP_NAME
         value: silence-operator
       - name: KONFIGURE_APP_VERSION
-        value: 0.2.1
+        value: 0.2.2
       - name: KONFIGURE_APP_CATALOG
         value: control-plane-catalog
       name: konfigure

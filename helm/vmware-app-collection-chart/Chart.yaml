@@ -1,3 +1,0 @@
-description: A chart used to deploy App CRs
-name: vmware-app-collection-chart
-version: 1.0.0-[[ .SHA ]]

@@ -1,6 +1,8 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
   name: prometheus-rules
   namespace: argocd
 spec:
@@ -15,7 +17,7 @@ spec:
       - name: KONFIGURE_APP_NAME
         value: prometheus-rules
       - name: KONFIGURE_APP_VERSION
-        value: 0.17.0
+        value: 0.17.1
       - name: KONFIGURE_APP_CATALOG
         value: control-plane-catalog
       name: konfigure
@@ -23,6 +25,6 @@ spec:
     targetRevision: v1
   syncPolicy:
     automated:
-      allowEmpty: true
+      allowEmpty: false
       prune: true
       selfHeal: true

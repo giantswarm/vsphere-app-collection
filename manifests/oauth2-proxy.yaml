@@ -17,7 +17,7 @@ spec:
       - name: KONFIGURE_APP_NAME
         value: oauth2-proxy
       - name: KONFIGURE_APP_VERSION
-        value: 2.2.0
+        value: 2.2.1
       - name: KONFIGURE_APP_CATALOG
         value: control-plane-catalog
       name: konfigure

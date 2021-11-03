@@ -17,7 +17,7 @@ spec:
       - name: KONFIGURE_APP_NAME
         value: happa
       - name: KONFIGURE_APP_VERSION
-        value: 1.28.2
+        value: 1.29.0
       - name: KONFIGURE_APP_CATALOG
         value: control-plane-catalog
       name: konfigure

@@ -17,7 +17,7 @@ spec:
       - name: KONFIGURE_APP_NAME
         value: prometheus-meta-operator
       - name: KONFIGURE_APP_VERSION
-        value: 1.52.1
+        value: 1.53.0
       - name: KONFIGURE_APP_CATALOG
         value: control-plane-catalog
       name: konfigure

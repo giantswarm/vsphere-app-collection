@@ -17,7 +17,7 @@ spec:
       - name: KONFIGURE_APP_NAME
         value: etcd-backup-operator
       - name: KONFIGURE_APP_VERSION
-        value: 2.8.0
+        value: 2.9.0
       - name: KONFIGURE_APP_CATALOG
         value: control-plane-catalog
       name: konfigure

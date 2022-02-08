@@ -1,0 +1,3 @@
+generators:
+- kustomization.yaml
+- vertical-pod-autoscaler-app.yaml

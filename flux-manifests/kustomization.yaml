@@ -1,4 +1,5 @@
 generators:
 - app-admission-controller.yaml
+- athena.yaml
 - prometheus-rules.yaml
 - vertical-pod-autoscaler-app.yaml

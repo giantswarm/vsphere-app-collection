@@ -2,5 +2,6 @@ generators:
 - app-admission-controller.yaml
 - athena.yaml
 - g8s-grafana.yaml
+- happa.yaml
 - prometheus-rules.yaml
 - vertical-pod-autoscaler-app.yaml

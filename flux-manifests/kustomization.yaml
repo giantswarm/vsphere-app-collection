@@ -4,4 +4,5 @@ generators:
 - g8s-grafana.yaml
 - happa.yaml
 - prometheus-rules.yaml
+- rbac-operator.yaml
 - vertical-pod-autoscaler-app.yaml

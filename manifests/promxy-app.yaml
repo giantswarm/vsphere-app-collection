@@ -17,7 +17,7 @@ spec:
       - name: KONFIGURE_APP_NAME
         value: promxy-app
       - name: KONFIGURE_APP_VERSION
-        value: 1.13.1
+        value: 1.14.0
       - name: KONFIGURE_APP_CATALOG
         value: control-plane-catalog
       name: konfigure

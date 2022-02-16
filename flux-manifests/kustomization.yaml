@@ -5,5 +5,6 @@ generators:
 - happa.yaml
 - kube-state-metrics-app.yaml
 - prometheus-rules.yaml
+- promxy-app.yaml
 - rbac-operator.yaml
 - vertical-pod-autoscaler-app.yaml

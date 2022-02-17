@@ -1,5 +1,6 @@
 generators:
 - app-admission-controller.yaml
+- app-operator.yaml
 - athena.yaml
 - g8s-grafana.yaml
 - happa.yaml

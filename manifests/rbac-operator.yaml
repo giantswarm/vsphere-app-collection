@@ -17,7 +17,7 @@ spec:
       - name: KONFIGURE_APP_NAME
         value: rbac-operator
       - name: KONFIGURE_APP_VERSION
-        value: 0.21.0
+        value: 0.22.0
       - name: KONFIGURE_APP_CATALOG
         value: control-plane-catalog
       name: konfigure

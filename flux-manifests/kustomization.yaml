@@ -5,6 +5,7 @@ generators:
 - g8s-grafana.yaml
 - happa.yaml
 - kube-state-metrics-app.yaml
+- kyverno.yaml
 - prometheus-rules.yaml
 - promxy-app.yaml
 - rbac-operator.yaml

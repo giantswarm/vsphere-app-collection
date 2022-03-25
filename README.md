@@ -1,2 +1,3 @@
-# vmware-app-collection
-VMWare App collection
+# vsphere-app-collection
+
+vSphere App collection for CAPV clusters

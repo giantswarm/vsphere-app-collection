@@ -14,7 +14,6 @@ generators:
 - g8s-efk.yaml
 - g8s-grafana.yaml
 - grafana-app.yaml
-- grafana.yaml
 - happa.yaml
 - kube-state-metrics-app.yaml
 - kyverno.yaml

@@ -13,6 +13,7 @@ generators:
 - falco-app.yaml
 - g8s-efk.yaml
 - g8s-grafana.yaml
+- grafana.yaml
 - happa.yaml
 - kube-state-metrics-app.yaml
 - kyverno.yaml

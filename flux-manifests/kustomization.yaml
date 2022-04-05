@@ -15,6 +15,7 @@ generators:
 - grafana.yaml
 - happa.yaml
 - kube-state-metrics-app.yaml
+- kyverno-policies.yaml
 - kyverno.yaml
 - macropower-analytics-panel-server.yaml
 - management-cluster-admission.yaml

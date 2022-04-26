@@ -12,7 +12,6 @@ generators:
 - etcd-backup-operator.yaml
 - falco-app.yaml
 - fluent-logshipping-app.yaml
-- g8s-efk.yaml
 - grafana.yaml
 - happa.yaml
 - kube-state-metrics-app.yaml

@@ -35,7 +35,6 @@ generators:
 - rbac-operator.yaml
 - release-operator.yaml
 - silence-operator.yaml
-- starboard-app.yaml
 - trivy-app.yaml
 - vertical-pod-autoscaler-app.yaml
 - vertical-pod-autoscaler-crd.yaml

@@ -15,7 +15,7 @@ generators:
 - fluent-logshipping-app.yaml
 - grafana.yaml
 - happa.yaml
-- kube-state-metrics-app.yaml
+- kube-state-metrics.yaml
 - kyverno-policies.yaml
 - kyverno.yaml
 - macropower-analytics-panel-server.yaml

@@ -4,7 +4,6 @@ generators:
 - app-operator.yaml
 - athena.yaml
 - cert-exporter.yaml
-- cert-manager-app.yaml
 - chart-operator.yaml
 - cluster-apps-operator.yaml
 - config-controller.yaml

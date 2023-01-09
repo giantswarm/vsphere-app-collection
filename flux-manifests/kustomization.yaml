@@ -21,7 +21,6 @@ generators:
 - management-cluster-admission.yaml
 - metrics-server-app.yaml
 - net-exporter.yaml
-- node-exporter-app.yaml
 - node-operator.yaml
 - oauth2-proxy.yaml
 - organization-operator.yaml

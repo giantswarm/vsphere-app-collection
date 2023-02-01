@@ -11,6 +11,7 @@ generators:
 - dex-app.yaml
 - etcd-backup-operator.yaml
 - falco-app.yaml
+- falco.yaml
 - fluent-logshipping-app.yaml
 - grafana.yaml
 - happa.yaml

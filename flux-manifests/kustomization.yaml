@@ -5,6 +5,7 @@ generators:
 - athena.yaml
 - cert-exporter.yaml
 - chart-operator.yaml
+- cluster-api-provider-vsphere.yaml
 - cluster-apps-operator.yaml
 - config-controller.yaml
 - dashboards.yaml

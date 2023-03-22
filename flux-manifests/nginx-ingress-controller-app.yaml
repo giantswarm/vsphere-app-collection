@@ -1,13 +1,13 @@
 api_version: generators.giantswarm.io/v1
-app_catalog: control-plane-catalog
+app_catalog: giantswarm
 app_destination_namespace: kube-system
-app_name: metrics-server-app
-app_version: 2.0.0
+app_name: nginx-ingress-controller-app
+app_version: 2.26.0
 kind: Konfigure
 metadata:
   annotations:
     config.kubernetes.io/function: |-
       exec:
         path: /plugins/konfigure
-  name: metrics-server-app
-name: metrics-server-app
+  name: nginx-ingress-controller-app
+name: nginx-ingress-controller-app

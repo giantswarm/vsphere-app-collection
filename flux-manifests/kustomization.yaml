@@ -27,7 +27,6 @@ generators:
 - kyverno-policies-ux.yaml
 - kyverno-policies.yaml
 - kyverno-policy-operator.yaml
-- kyverno.yaml
 - macropower-analytics-panel-server.yaml
 - nginx-ingress-controller-app.yaml
 - oauth2-proxy.yaml

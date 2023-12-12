@@ -30,7 +30,6 @@ generators:
 - kyverno-policy-operator.yaml
 - kyverno.yaml
 - macropower-analytics-panel-server.yaml
-- nginx-ingress-controller-app.yaml
 - oauth2-proxy.yaml
 - organization-operator.yaml
 - prometheus-meta-operator.yaml

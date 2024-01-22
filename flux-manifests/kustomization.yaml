@@ -30,6 +30,7 @@ generators:
 - kyverno-policies.yaml
 - kyverno-policy-operator.yaml
 - kyverno.yaml
+- loki.yaml
 - macropower-analytics-panel-server.yaml
 - oauth2-proxy.yaml
 - organization-operator.yaml

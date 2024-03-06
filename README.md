@@ -1,8 +1,8 @@
 # vsphere-app-collection chart
 
-Vsphere App Collection contains the set of resources are deployed to the Management Cluster in the Giant Swarm Vsphere platform.
+Vsphere App Collection contains the set of resources are deployed to the Management Cluster in the Giant Swarm vSphere platform.
 
-Here we define the Cluster OpenStack App chart with its templates and default configuration.
+Here we define the Cluster vSphere App chart with its templates and default configuration.
 
 ## Installing
 

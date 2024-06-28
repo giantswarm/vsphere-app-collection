@@ -29,6 +29,7 @@ generators:
 - kyverno-policies-ux.yaml
 - logging-operator.yaml
 - loki.yaml
+- mimir.yaml
 - observability-operator.yaml
 - organization-operator.yaml
 - prometheus-meta-operator.yaml

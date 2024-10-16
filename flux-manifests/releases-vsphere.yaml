@@ -2,6 +2,7 @@ api_version: generators.giantswarm.io/v1
 app_catalog: releases
 app_destination_namespace: giantswarm
 app_name: releases-vsphere
+app_version: 0.0.0-07ae6c37d5d4d78a7ec452d325dffea6182afab6
 kind: Konfigure
 metadata:
   annotations:

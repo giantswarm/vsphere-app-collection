@@ -1,0 +1,13 @@
+api_version: generators.giantswarm.io/v1
+app_catalog: releases
+app_destination_namespace: giantswarm
+app_name: releases-vsphere
+app_version: 0.0.0-8f9ca24c4bfd96dbe6f1d0eacc786b56c5b170fe
+kind: Konfigure
+metadata:
+  annotations:
+    config.kubernetes.io/function: |-
+      exec:
+        path: /plugins/konfigure
+  name: releases-vsphere
+name: releases-vsphere

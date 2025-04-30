@@ -29,6 +29,7 @@ resources:
 - image-distribution-operator.yaml
 - ingress-nginx.yaml
 - konfiguration.yaml
+- konfigure-operator.yaml
 - kube-downscaler.yaml
 - kyverno-policies-connectivity.yaml
 - kyverno-policies-dx.yaml

@@ -38,6 +38,7 @@ spec:
           - happa
           - image-distribution-operator
           - ingress-nginx
+          - keda
           - konfigure-operator
           - kube-downscaler
           - kyverno-policies-connectivity

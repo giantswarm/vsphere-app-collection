@@ -20,4 +20,4 @@ spec:
     inCluster: true
   name: alertmanager-to-github
   namespace: monitoring
-  version: 0.0.1-test
+  version: 0.0.1-test3

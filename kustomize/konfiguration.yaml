@@ -9,6 +9,7 @@ spec:
       excludes: {}
       includes:
         exactMatchers:
+          - alertmanager-to-github
           - alloy-gateway
           - app-admission-controller
           - app-exporter

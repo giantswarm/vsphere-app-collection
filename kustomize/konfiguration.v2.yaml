@@ -15,6 +15,10 @@ spec:
         - name: installation
           value: "${cluster_name}"
     iterations:
+      alertmanager-to-github:
+        variables:
+          - name: app
+            value: alertmanager-to-github
       alloy-gateway:
         variables:
           - name: app

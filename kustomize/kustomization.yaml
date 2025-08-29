@@ -1,4 +1,5 @@
 resources:
+- alertmanager-to-github.yaml
 - alloy-gateway.yaml
 - app-admission-controller.yaml
 - app-exporter.yaml
@@ -29,8 +30,8 @@ resources:
 - image-distribution-operator.yaml
 - ingress-nginx.yaml
 - keda.yaml
-- konfiguration.yaml
 - konfiguration.v2.yaml
+- konfiguration.yaml
 - konfigure-operator.yaml
 - kube-downscaler.yaml
 - kyverno-policies-connectivity.yaml

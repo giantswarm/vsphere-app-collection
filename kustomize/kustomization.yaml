@@ -1,5 +1,4 @@
 resources:
-- alertmanager-to-github.yaml
 - alloy-gateway.yaml
 - app-admission-controller.yaml
 - app-exporter.yaml

@@ -55,10 +55,6 @@ spec:
         variables:
           - name: app
             value: cluster-api-ipam-provider-in-cluster
-      cluster-api-monitoring:
-        variables:
-          - name: app
-            value: cluster-api-monitoring
       cluster-api-provider-vsphere:
         variables:
           - name: app

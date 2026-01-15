@@ -7,7 +7,6 @@ resources:
 - cluster-api-cleaner-vsphere.yaml
 - cluster-api-events.yaml
 - cluster-api-ipam-provider-in-cluster.yaml
-- cluster-api-monitoring.yaml
 - cluster-api-provider-vsphere.yaml
 - cluster-api.yaml
 - cluster-apps-operator.yaml

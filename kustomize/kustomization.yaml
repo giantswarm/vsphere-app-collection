@@ -6,7 +6,6 @@ resources:
 - cluster-api-ipam-provider-in-cluster.yaml
 - cluster-api-provider-vsphere.yaml
 - cluster-api.yaml
-- cluster-apps-operator.yaml
 - cluster-cleaner.yaml
 - dashboards.yaml
 - deletion-blocker-operator.yaml

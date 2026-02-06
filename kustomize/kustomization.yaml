@@ -1,5 +1,4 @@
 resources:
-- cloudnative-pg.yaml
 - cluster-api-cleaner-vsphere.yaml
 - cluster-api-events.yaml
 - cluster-api-ipam-provider-in-cluster.yaml
